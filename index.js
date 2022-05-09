@@ -1,12 +1,13 @@
 let column = Array(6).fill('');
 
-function randomize(){
-    console.log(
-        Math.floor(6 * Math.random() + 1)
-    );
+function randomizeStatement(){
+    for (let i = 0; i < 6; i++){
+        let l = Math.floor(7 * Math.random() + 1)
+        statement(`${l}${i}`)
+    }
 }
 
-function manualStatement(id){
+function statement(id){
     column[id.charAt(1)] = " " + document.getElementById(id).innerText.replace(/\n/g, " ")
     document.getElementById('korwinsStatement-text').innerText =
         column[0] + column[1] + column[2] + column[3] + column[4] + column[5];
@@ -24,6 +25,5 @@ function manualStatement(id){
 
     }
     document.getElementById(id).style.backgroundColor = '#c8c8e0'
-    document.getElementById(id).style.color = '#000'
-
+    document.getElementById(id).style.color = '#242526'
 }

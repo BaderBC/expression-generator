@@ -46,13 +46,25 @@ body{
 }
 
 #korwinsStatement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #528758;
     padding: 0 10px 0 10px;
     border-radius: 10px;
-    margin: auto;
+    margin: 0 auto 10px auto;
     width: fit-content;
     height: fit-content;
     font-size: 30px;
     max-width: 1000px;
     color: #242526;
+    min-width: 300px;
+    min-height: 70px;
+}
+
+#dice{
+    cursor: pointer;
+    margin-right: 20px;
+    height: 60px;
+    float: left;
 }

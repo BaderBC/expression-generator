@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Generator Wypowiedzi KorWin'a</title>
 </head>
-<body onload="randomize()">
+<body>
     <script src="index.js" defer></script>
 
     <h1>Stwórz swoją własną wypowiedź<br>
@@ -17,66 +17,67 @@
     <img src="korwin-bialy.jpg" alt="Janusz Korwin-Mikke jako Gandalf" style="padding: 15px">
 
     <div id="korwinsStatement">
-        <p id="korwinsStatement-text"></p>
+        <img onclick="randomizeStatement()" id="dice" src="./Minimal-Dice.svg" alt="dice">
+            <p id="korwinsStatement-text"></p>
     </div>
 
     <div class="divTable">
         <div class="divTableBody">
             <div class="divTableRow">
-                <div class="divTableCell" id="00" onclick="manualStatement('00')">Ja chcę powiedzieć<br> jedną rzecz: </div>
-                <div class="divTableCell" id="01" onclick="manualStatement('01')">przedstawiciele<br> czerwonej hołoty </div>
-                <div class="divTableCell" id="02" onclick="manualStatement('02')">zupełnie<br> bezkarnie </div>
-                <div class="divTableCell" id="03" onclick="manualStatement('03')">nawołują do<br> podniesienia<br> podatków </div>
-                <div class="divTableCell" id="04" onclick="manualStatement('04')">bo dzięki temu<br> mogą kraść </div>
-                <div class="divTableCell" id="05" onclick="manualStatement('05')">przez kolejne<br> kadencje.</div>
+                <div class="divTableCell" id="00" onclick="statement('00')">Ja chcę powiedzieć<br> jedną rzecz: </div>
+                <div class="divTableCell" id="01" onclick="statement('01')">przedstawiciele<br> czerwonej hołoty </div>
+                <div class="divTableCell" id="02" onclick="statement('02')">zupełnie<br> bezkarnie </div>
+                <div class="divTableCell" id="03" onclick="statement('03')">nawołują do<br> podniesienia<br> podatków </div>
+                <div class="divTableCell" id="04" onclick="statement('04')">bo dzięki temu<br> mogą kraść </div>
+                <div class="divTableCell" id="05" onclick="statement('05')">przez kolejne<br> kadencje.</div>
             </div>
             <div class="divTableRow">
-                <div class="divTableCell" id="10" onclick="manualStatement('10')">Trzeba powiedzieć<br> jasno: </div>
-                <div class="divTableCell" id="11" onclick="manualStatement('11')">ci wszyscy (tfu!)<br> geje </div>
-                <div class="divTableCell" id="12" onclick="manualStatement('12')">całkowicie<br> bezczelnie </div>
-                <div class="divTableCell" id="13" onclick="manualStatement('13')">próbują wyrzucić<br> kierowców z miast </div>
-                <div class="divTableCell" id="14" onclick="manualStatement('14')">bo dostają za to<br> pieniądze </div>
-                <div class="divTableCell" id="15" onclick="manualStatement('15')">o czym się nie mówi.</div>
+                <div class="divTableCell" id="10" onclick="statement('10')">Trzeba powiedzieć<br> jasno: </div>
+                <div class="divTableCell" id="11" onclick="statement('11')">ci wszyscy (tfu!)<br> geje </div>
+                <div class="divTableCell" id="12" onclick="statement('12')">całkowicie<br> bezczelnie </div>
+                <div class="divTableCell" id="13" onclick="statement('13')">próbują wyrzucić<br> kierowców z miast </div>
+                <div class="divTableCell" id="14" onclick="statement('14')">bo dostają za to<br> pieniądze </div>
+                <div class="divTableCell" id="15" onclick="statement('15')">o czym się nie mówi.</div>
             </div>
             <div class="divTableRow">
-                <div class="divTableCell" id="20" onclick="manualStatement('20')">Jak powiedział<br> wybitny krakowianin<br> Stanisław Lem: </div>
-                <div class="divTableCell" id="21" onclick="manualStatement('21')">funkcjonariusze<br> reżymowej<br> telewizji </div>
-                <div class="divTableCell" id="22" onclick="manualStatement('22')">o poglądach<br> na lewo<br> od komunizmu </div>
-                <div class="divTableCell" id="23" onclick="manualStatement('23')">próbują skłócić<br> Polskę z Rosją </div>
-                <div class="divTableCell" id="24" onclick="manualStatement('24')">bo tak się uczy<br> w państwowej<br> szkole </div>
-                <div class="divTableCell" id="25" onclick="manualStatement('25')">i właśnie dlatego<br> Europa umiera.</div>
+                <div class="divTableCell" id="20" onclick="statement('20')">Jak powiedział<br> wybitny krakowianin<br> Stanisław Lem: </div>
+                <div class="divTableCell" id="21" onclick="statement('21')">funkcjonariusze<br> reżimowej<br> telewizji </div>
+                <div class="divTableCell" id="22" onclick="statement('22')">o poglądach<br> na lewo<br> od komunizmu </div>
+                <div class="divTableCell" id="23" onclick="statement('23')">próbują skłócić<br> Polskę z Rosją </div>
+                <div class="divTableCell" id="24" onclick="statement('24')">bo tak się uczy<br> w państwowej<br> szkole </div>
+                <div class="divTableCell" id="25" onclick="statement('25')">i właśnie dlatego<br> Europa umiera.</div>
             </div>
             <div class="divTableRow">
-                <div class="divTableCell" id="30" onclick="manualStatement('30')">Proszę mnie dobrze<br> zrozumieć: </div>
-                <div class="divTableCell" id="31" onclick="manualStatement('31')">tak zwani<br> ekolodzy </div>
-                <div class="divTableCell" id="32" onclick="manualStatement('32')">celowo<br> i świadomie </div>
-                <div class="divTableCell" id="33" onclick="manualStatement('33')">głoszą brednie<br> o globalnym<br> ociepleniu </div>
-                <div class="divTableCell" id="34" onclick="manualStatement('34')">bo bez tego(tfu!)<br> demokracja nie<br> może istnieć </div>
-                <div class="divTableCell" id="35" onclick="manualStatement('35')">ale przyjdą<br> muzułmanie i zrobią<br> porządek.</div>
+                <div class="divTableCell" id="30" onclick="statement('30')">Proszę mnie dobrze<br> zrozumieć: </div>
+                <div class="divTableCell" id="31" onclick="statement('31')">tak zwani<br> ekolodzy </div>
+                <div class="divTableCell" id="32" onclick="statement('32')">celowo<br> i świadomie </div>
+                <div class="divTableCell" id="33" onclick="statement('33')">głoszą brednie<br> o globalnym<br> ociepleniu </div>
+                <div class="divTableCell" id="34" onclick="statement('34')">bo bez tego(tfu!)<br> demokracja nie<br> może istnieć </div>
+                <div class="divTableCell" id="35" onclick="statement('35')">ale przyjdą<br> muzułmanie i zrobią<br> porządek.</div>
             </div>
             <div class="divTableRow">
-                <div class="divTableCell" id="40" onclick="manualStatement('40')">Ja chciałem państwu<br> przypomnieć, że: </div>
-                <div class="divTableCell" id="41" onclick="manualStatement('41')">ci wszyscy (tfu!)<br> demokraci </div>
-                <div class="divTableCell" id="42" onclick="manualStatement('42')">z premedytacją </div>
-                <div class="divTableCell" id="43" onclick="manualStatement('43')">zakazują<br> posiadania broni </div>
-                <div class="divTableCell" id="44" onclick="manualStatement('44')">bo głupich jest<br> więcej niż mądrych </div>
-                <div class="divTableCell" id="45" onclick="manualStatement('45')">-tak samo zresztą<br> jak za Hitlera. </div>
+                <div class="divTableCell" id="40" onclick="statement('40')">Ja chciałem państwu<br> przypomnieć, że: </div>
+                <div class="divTableCell" id="41" onclick="statement('41')">ci wszyscy (tfu!)<br> demokraci </div>
+                <div class="divTableCell" id="42" onclick="statement('42')">z premedytacją </div>
+                <div class="divTableCell" id="43" onclick="statement('43')">zakazują<br> posiadania broni </div>
+                <div class="divTableCell" id="44" onclick="statement('44')">bo głupich jest<br> więcej niż mądrych </div>
+                <div class="divTableCell" id="45" onclick="statement('45')">-tak samo zresztą<br> jak za Hitlera. </div>
             </div>
             <div class="divTableRow">
-                <div class="divTableCell" id="50" onclick="manualStatement('50')">Niech państwo nie<br> mają złudzeń: </div>
-                <div class="divTableCell" id="51" onclick="manualStatement('51')">agenci bezpieki </div>
-                <div class="divTableCell" id="52" onclick="manualStatement('52')">od czasów<br> Okrągłego Stołu </div>
-                <div class="divTableCell" id="53" onclick="manualStatement('53')">nie dopuszczają<br> prawicy do władzy </div>
-                <div class="divTableCell" id="54" onclick="manualStatement('54')">bo chcą tworzyć<br> raj na ziemi </div>
-                <div class="divTableCell" id="55" onclick="manualStatement('55')">-proszę zobaczyć,<br> co się dzieje na<br> Zachodzie, jeśli mi<br> państwo nie wierzą.</div>
+                <div class="divTableCell" id="50" onclick="statement('50')">Niech państwo nie<br> mają złudzeń: </div>
+                <div class="divTableCell" id="51" onclick="statement('51')">agenci bezpieki </div>
+                <div class="divTableCell" id="52" onclick="statement('52')">od czasów<br> Okrągłego Stołu </div>
+                <div class="divTableCell" id="53" onclick="statement('53')">nie dopuszczają<br> prawicy do władzy </div>
+                <div class="divTableCell" id="54" onclick="statement('54')">bo chcą tworzyć<br> raj na ziemi </div>
+                <div class="divTableCell" id="55" onclick="statement('55')">-proszę zobaczyć,<br> co się dzieje na<br> Zachodzie, jeśli mi<br> państwo nie wierzą.</div>
             </div>
             <div class="divTableRow">
-                <div class="divTableCell" id="60" onclick="manualStatement('60')">Powiedzmy to<br> wyraźnie: </div>
-                <div class="divTableCell" id="61" onclick="manualStatement('61')">feministki </div>
-                <div class="divTableCell" id="62" onclick="manualStatement('62')">w ramach<br> postępu </div>
-                <div class="divTableCell" id="63" onclick="manualStatement('63')">uczą dzieci<br> homoseksualizmu </div>
-                <div class="divTableCell" id="64" onclick="manualStatement('64')">bo chcą niszczyć<br> cywilizację białego<br> człowieka </div>
-                <div class="divTableCell" id="65" onclick="manualStatement('65')">co lat temu sto<br> nikomu nie<br> przyszłoby nawet<br> do głowy.</div>
+                <div class="divTableCell" id="60" onclick="statement('60')">Powiedzmy to<br> wyraźnie: </div>
+                <div class="divTableCell" id="61" onclick="statement('61')">feministki </div>
+                <div class="divTableCell" id="62" onclick="statement('62')">w ramach<br> postępu </div>
+                <div class="divTableCell" id="63" onclick="statement('63')">uczą dzieci<br> homoseksualizmu </div>
+                <div class="divTableCell" id="64" onclick="statement('64')">bo chcą niszczyć<br> cywilizację białego<br> człowieka </div>
+                <div class="divTableCell" id="65" onclick="statement('65')">co lat temu sto<br> nikomu nie<br> przyszłoby nawet<br> do głowy.</div>
             </div>
         </div>
     </div>
