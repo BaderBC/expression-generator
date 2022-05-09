@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body{
+    margin: 0;
+    background-color: #242526;
+    color: #cccdce;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.divTable{
+    margin-right: auto;
+    margin-left: auto;
+    display: table;
+    width: 95%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.divTableRow {
+    display: table-row;
+}
+.divTableHeading {
+    background-color: #EEE;
+    display: table-header-group;
+}
+.divTableCell, .divTableHead {
+    border: 2px solid #2f2f2f;
+    display: table-cell;
+    padding: 3px 10px;
+    font-size: 25px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.divTableHeading {
+    background-color: #EEE;
+    display: table-header-group;
+    font-weight: bold;
+}
+.divTableFoot {
+    background-color: #EEE;
+    display: table-footer-group;
+    font-weight: bold;
+}
+.divTableBody {
+    display: table-row-group;
+}
+
+#korwinsStatement{
+    background-color: #528758;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    font-size: 30px;
+    max-width: 1000px;
+    color: #242526;
+}
