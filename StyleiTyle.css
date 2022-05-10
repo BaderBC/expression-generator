@@ -60,10 +60,10 @@ body{
     color: #242526;
     min-width: 300px;
     min-height: 70px;
+    cursor: pointer;
 }
 
 #dice{
-    cursor: pointer;
     margin-right: 20px;
     height: 60px;
     float: left;

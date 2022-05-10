@@ -2,7 +2,7 @@ let column = Array(6).fill('');
 
 function randomizeStatement(){
     for (let i = 0; i < 6; i++){
-        let l = Math.floor(7 * Math.random() + 1)
+        let l = Math.floor(6 * Math.random() + 1)
         statement(`${l}${i}`)
     }
 }
