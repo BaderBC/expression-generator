@@ -5,6 +5,7 @@ function randomizeStatement(){
         let l = Math.floor(6 * Math.random() + 1)
         statement(`${l}${i}`)
     }
+    navigator.clipboard.writeText(document.getElementById('korwinsStatement-text').innerText)
 }
 
 function statement(id){
