@@ -8,15 +8,12 @@ let columnLength,
 
 
 function onLoad(){
-    tableGenerator().then(([arr1, arr2]) =>{
-        columnLength = arr1;
-        rowLength = arr2;
-    }).catch(err => console.error(err));
+    tableGenerator().catch(err => console.error(err))
 }
 
 function randomizeStatement(){
     for (let i = 0; i < 6; i++){
-        let l = Math.floor(Math.random() * (rowLength - 1) + 1)
+        let l = Math.floor(Math.random() * rowLength)
         statement(`${l}${i}`)
     }
     navigator.clipboard.writeText(document.getElementById('korwinsStatement-text').innerText).then()
@@ -48,15 +45,15 @@ async function tableGenerator() {
                     doc.innerHTML += '<div class="divTableRow">'
 
                     arr.forEach((element, index2) => {
-                        doc.innerHTML += `<div class="divTableCell" id="${index1}${index2}" onclick="statement('${index1}${index2}')">${element}</div>`
+                        doc.innerHTML +=
+                            `<div class="divTableCell" id="${index1}${index2}" onclick="statement('${index1}${index2}')">${element}</div>`
                     })
-
                     doc.innerHTML += '</div>'
-                    return data;
-                }).then((data) => {
-                    console.log(data);
-                    return [data[0].length, data[1].length]
                 })
+                return [data.length, data[0].length]
+            }).then((data) => {
+                columnLength = data[1];
+                rowLength = data[0];
             }).catch((err) => {
                 return err;
             })
