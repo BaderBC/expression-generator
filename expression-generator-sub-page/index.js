@@ -1,11 +1,17 @@
 'use strict'
 
-let column = Array(columnLength).fill(''),
+let columnLength,
+    rowLength,
+    column = Array(columnLength).fill(''),
     l,
     i;
 
+
 function onLoad(){
-    tableGenerator().catch(err => console.error(err));
+    tableGenerator().then(([arr1, arr2]) =>{
+        columnLength = arr1;
+        rowLength = arr2;
+    }).catch(err => console.error(err));
 }
 
 function randomizeStatement(){
@@ -35,7 +41,6 @@ async function tableGenerator() {
     let url = 'expression-table.json',
         fetchTable = fetch(url),
         doc = document.getElementById('divTableBody');
-
         await fetchTable
             .then(res => res.json())
             .then((data) => {
@@ -47,6 +52,10 @@ async function tableGenerator() {
                     })
 
                     doc.innerHTML += '</div>'
+                    return data;
+                }).then((data) => {
+                    console.log(data);
+                    return [data[0].length, data[1].length]
                 })
             }).catch((err) => {
                 return err;
